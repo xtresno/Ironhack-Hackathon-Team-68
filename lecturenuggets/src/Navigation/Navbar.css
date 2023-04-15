@@ -1,0 +1,74 @@
+/* Update the padding of the navbar container */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+/* Update the padding of the MY_NAV class */
+.MY_NAV {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav_get_started,
+.nav_login {
+    margin-right: 10px;
+}
+
+.nav_upload {
+    background-color: #007bff;
+    border: none;
+}
+
+/* Custom CSS for search bar */
+form.d-flex {
+    flex-grow: 1;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* Adjust search bar width */
+form.d-flex .form-control {
+    width: 100%;
+}
+
+/* Media query to adjust the search bar for smaller screens */
+@media (max-width: 991.98px) {
+    form.d-flex {
+        display: none;
+    }
+}
+
+.nav_logo_header {
+    margin-top: 3rem;
+    width: 30vh;
+
+}
+
+/* Make the image go beyond the navbar */
+.MY_NAV img {
+    position: absolute;
+    top: -10px;
+    /* Adjust this value according to the desired height */
+    left: 0;
+    z-index: 10;
+    position: relative;
+}
+
+.navbar {
+    border: 3px solid;
+    border-image: linear-gradient(to right, rgb(128, 0, 128), rgb(255, 255, 102), rgb(0, 0, 0)) 30;
+}

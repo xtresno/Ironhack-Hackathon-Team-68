@@ -2,7 +2,10 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './Pages/Dashboard';
+import TeacherDashboard from './Pages/TeacherDashboard';
+
 import Navbar from './Navigation/Nav_Comp.js';
+
 
 const App = () => {
   return (
@@ -10,9 +13,9 @@ const App = () => {
       <Router>
         <Navbar />
         <Routes>
-          {/* Uncomment the line below when you have a Home component */}
-          {/* <Route path="/" element={<Home />} /> */}
           <Route path="/" element={<Dashboard />} />
+          <Route path="/teacherdashboard" element={<TeacherDashboard />} />
+
         </Routes>
       </Router>
     </div>

@@ -1,5 +1,48 @@
+@font-face {
+    font-family: 'Nexa';
+    src: local('Nexa'), url('../Fonts/Nexa-Trial-Bold.ttf') format('truetype');
+}
+
 .dashboard {
-    padding: 30px 0;
+    display: flex;
+    padding: 0;
+}
+
+.sideNav {
+    width: 250px;
+    height: 100vh;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+
+}
+
+.sideNav h4 {
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+
+
+.searchTopics {
+    margin-bottom: 1rem;
+
+}
+
+
+
+.ageCheckbox {
+    margin-bottom: 0.5rem;
+}
+
+.mainContent {
+    flex-grow: 1;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
 }
 
 .video-thumbnail {
@@ -14,10 +57,12 @@
     object-fit: cover;
 }
 
-.video-info {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
+.video-info h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+    /* Add this property to center the text */
 }
 
 .video-info h4 {
@@ -40,31 +85,11 @@
     display: flex;
 }
 
-.leftSidebar,
-.rightSidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 80px;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.leftSidebar {
-    left: 0;
-}
-
-.rightSidebar {
-    right: 0;
-}
-
-.mainContent {
-    flex-grow: 1;
-    margin: 0 auto;
-    max-width: 1200px;
-}
 
 .videoCard {
     margin-bottom: 30px;
+    margin-top: 20rem;
+    /* Add this line to apply a margin on top */
 }
 
 .video {
@@ -79,6 +104,10 @@
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .actions {
@@ -87,31 +116,60 @@
     margin-top: 5px;
 }
 
-@media (max-width: 767.98px) {
-
-    .leftSidebar,
-    .rightSidebar {
-        display: none;
-    }
-}
-
-/* .fullVideo {
-    height: 70vh;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .fullVideo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  } */
-
 .fullVideo {
-    height: 70vh;
-    overflow: hidden;
+    height: 100vh;
+    width: 50%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+}
+
+.fullVideo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+}
+
+
+
+/* Add or update these classes in your CSS file */
+
+.mainContent {
+    flex-grow: 1;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    height: calc(100vh - 60px);
+    /* Adjust the height to account for the navbar */
+    overflow-y: auto;
+    /* Add overflow-y to enable scrolling */
+}
+
+.filterSidebar {
+    width: 300px;
+    height: calc(100vh - 60px);
+    /* Adjust the height to account for the navbar */
+    overflow-y: auto;
+    /* Add overflow-y to enable scrolling */
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #dee2e6;
+}
+
+
+/* icons */
+
+.iconContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.icon {
+    margin: 5px;
+    font-size: 1.2rem;
 }
